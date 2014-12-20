@@ -1,5 +1,11 @@
 
+<style>
 body {
 	background-color: blue;
 }
 
+#webcam {
+	height:500px;
+	padding:5px;
+}
+</style>

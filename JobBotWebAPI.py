@@ -102,27 +102,22 @@ def RunCommand(CMD, CommandValue):
             runinstruction(i[1:], CommandValue)
 
 
-class WebBot(object):
-	@cherrypy.expose
-	def index(self):
-		cherrypy.session['laser'] = 'off'
-		return open(os.path.join(MEDIA_DIR, 'index.html')) 
-	
-	@cherrypy.expose
-	def laseron(self):
-		if cherrypy.session['laser'] == 'off':
-			pfio.digital_write(0,1)
-			cherrypy.session['laser'] = 'on'
-			return "Laser on!"
-		else:
-			pfio.digital_write(0,0)
-			cherrypy.session['laser']  = 'off'
-			return "Laser off!"
+class WebBotAPIs(object):
+	exposed = True
+
+	@cherrypy.tools.accept(media='text/plain')
+	def POST(self, CMD='', CommandValue=10):
+		RunCommand(CMD, int(CommandValue))
+		response = 'Command received: ' + CMD + str(CommandValue)
+		return response
+
 
 if __name__ == '__main__':
         conf = {
 				'/': {
+					'request.dispatch': cherrypy.dispatch.MethodDispatcher(),
 					'tools.sessions.on': True,
+					'tools.response_headers.on': True,
 					'tools.staticdir.root':os.path.abspath(os.getcwd())
 				},
 				'/static': {
@@ -130,7 +125,7 @@ if __name__ == '__main__':
 					'tools.staticdir.dir': './public'
 				}
 			}
-cherrypy.quickstart(WebBot(), '/', conf)
+cherrypy.quickstart(WebBotAPIs(), '/', conf)
 
 
 
