@@ -32,7 +32,7 @@ import os, os.path
 pfio.init()
 
 
-#Set up director for html files
+#Set up directory for html files
 MEDIA_DIR = os.path.join(os.path.abspath("."), "Media")
 
 mx = nxt.Motor(b, nxt.PORT_A)
@@ -101,8 +101,12 @@ def RunCommand(CMD, CommandValue):
         if i[0] == CMD:
             runinstruction(i[1:], CommandValue)
 
+class WebBot(object):
+	@cherrypy.expose
+	def index(self):
+		return file('index.html')
 
-class WebBotAPIs(object):
+class WebBotGenerator(object):
 	exposed = True
 
 	@cherrypy.tools.accept(media='text/plain')
@@ -115,17 +119,22 @@ class WebBotAPIs(object):
 if __name__ == '__main__':
         conf = {
 				'/': {
-					'request.dispatch': cherrypy.dispatch.MethodDispatcher(),
 					'tools.sessions.on': True,
-					'tools.response_headers.on': True,
 					'tools.staticdir.root':os.path.abspath(os.getcwd())
 				},
 				'/static': {
 					'tools.staticdir.on': True,
 					'tools.staticdir.dir': './public'
+				},
+				'/generator':{
+					'request.dispatch': cherrypy.dispatch.MethodDispatcher(),
+					'tools.response_headers.on': True,
+					'tools.response_headers.headers': [('Content-Type', 'text/plain')]
 				}
 			}
-cherrypy.quickstart(WebBotAPIs(), '/', conf)
+webapp = WebBot()
+webapp.generator = WebBotGenerator()
+cherrypy.quickstart(webapp, '/', conf)
 
 
 

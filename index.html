@@ -3,6 +3,7 @@
 		<html xmlns="http://www.w3.org/1999/xhtml">
 		<head>
 		<link href="/static/css/style.css" rel="stylesheet">
+		<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
 		</head>
 			<script type="text/javascript">
 			/*Copyright (C) 2007 Richard Atterer richard@atterer.net
@@ -42,14 +43,50 @@
 		  if (!paused) createImageLayer();
 		}
 
+			$(document).ready(function() {
+					$("#forward").click(function(e) {
+						$.ajax({
+							type: "POST",
+							url: "/generator",
+							data: {"CMD": "FWD"}
+							})
+						e.preventDefault();
+					});
+					$("#left").click(function(e) {
+						$.ajax({
+							type: "POST",
+							url: "/generator",
+							data: {"CMD": "LFT"}
+							})
+						e.preventDefault();
+					});
+					$("#right").click(function(e) {
+						$.ajax({
+							type: "POST",
+							url: "/generator",
+							data: {"CMD": "RGT"}
+							})
+						e.preventDefault();
+					});
+					$("#back").click(function(e) {
+						$.ajax({
+							type: "POST",
+							url: "/generator",
+							data: {"CMD": "BCK"}
+							})
+						e.preventDefault();
+					});
+				});
+
 		</script>
 		<body onload="createImageLayer();">
 
 			<div id="webcam"><noscript><img src="http://192.168.0.107:8080/?action=snapshot" /></noscript></div>
-			<form method="get" action="laseron">
-				<button type="submit">LASER!</button>
-			</form>
 
+			<button id="forward">Forward!</button>
+			<button id="left">Left!</button>
+			<button id="right">Right!</button>
+			<button id="back">Back!</button>
 		</body>
 		</html>
 	
