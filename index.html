@@ -44,36 +44,88 @@
 		}
 
 			$(document).ready(function() {
+					var defaultmove = "10"; //Default value for input form
 					$("#forward").click(function(e) {
 						$.ajax({
 							type: "POST",
 							url: "/generator",
-							data: {"CMD": "FWD"}
+							data: {"CMD": "FWD", "CommandValue": $("#CommandValueForm").val()}
 							})
+						$("#CommandValueForm").val(defaultmove);
 						e.preventDefault();
 					});
 					$("#left").click(function(e) {
 						$.ajax({
 							type: "POST",
 							url: "/generator",
-							data: {"CMD": "LFT"}
+							data: {"CMD": "LFT","CommandValue": $("#CommandValueForm").val()}
 							})
+						$("#CommandValueForm").val(defaultmove);
 						e.preventDefault();
 					});
 					$("#right").click(function(e) {
 						$.ajax({
 							type: "POST",
 							url: "/generator",
-							data: {"CMD": "RGT"}
+							data: {"CMD": "RGT","CommandValue": $("#CommandValueForm").val()}
 							})
+						$("#CommandValueForm").val(defaultmove);
 						e.preventDefault();
 					});
 					$("#back").click(function(e) {
 						$.ajax({
 							type: "POST",
 							url: "/generator",
-							data: {"CMD": "BCK"}
+							data: {"CMD": "BCK","CommandValue": $("#CommandValueForm").val()}
 							})
+						$("#CommandValueForm").val(defaultmove);
+						e.preventDefault();
+					});
+
+					$("#claw").click(function(e) {
+						$.ajax({
+							type: "POST",
+							url: "/generator",
+							data: {"CMD": "CLS","CommandValue": $("#CommandValueForm").val()}
+							})
+						$("#CommandValueForm").val(defaultmove);
+						e.preventDefault();
+					});
+					$("#unclaw").click(function(e) {
+						$.ajax({
+							type: "POST",
+							url: "/generator",
+							data: {"CMD": "OPN","CommandValue": $("#CommandValueForm").val()}
+							})
+						$("#CommandValueForm").val(defaultmove);
+						e.preventDefault();
+					});
+					$("#laseron").click(function(e) {
+						$.ajax({
+							type: "POST",
+							url: "/generator",
+							data: {"CMD": "LS+","CommandValue": $("#CommandValueForm").val()}
+							})
+						$("#CommandValueForm").val(defaultmove);
+						e.preventDefault();
+					});
+					$("#laseroff").click(function(e) {
+						$.ajax({
+							type: "POST",
+							url: "/generator",
+							data: {"CMD": "LS-","CommandValue": $("#CommandValueForm").val()}
+							})
+						$("#CommandValueForm").val(defaultmove);
+						e.preventDefault();
+						});
+
+					$("#headlight").click(function(e) {
+						$.ajax({
+							type: "POST",
+							url: "/generator",
+							data: {"CMD": "HLT","CommandValue": $("#CommandValueForm").val()}
+							})
+						$("#CommandValueForm").val(defaultmove);
 						e.preventDefault();
 					});
 				});
@@ -87,6 +139,15 @@
 			<button id="left">Left!</button>
 			<button id="right">Right!</button>
 			<button id="back">Back!</button>
+			Distance in cm or rotation in degrees <input type="text" value="10" name="CommandValue" id="CommandValueForm">
+			<p>
+			</p>
+
+			<button id="claw">Claw!</button>
+			<button id="unclaw">Unclaw!</button>
+			<button id="laseron">Laser on!</button>
+			<button id="laseroff">Laser off!</button>
+			<button id="headlight">Cycle headlights</button>
 		</body>
 		</html>
 	

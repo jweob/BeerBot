@@ -91,12 +91,11 @@ length = 10
 
 def runinstruction(i, Value):
     motorid, speed, degrees = i
-    #THIS IS THE IMPORTANT PART!
     thread.start_new_thread(
         turnmotor,
         (motors[motorid], speed, degrees*Value))
 
-def RunCommand(CMD, CommandValue):
+def RunLegoCommand(CMD, CommandValue):
     for i in instructions:
         if i[0] == CMD:
             runinstruction(i[1:], CommandValue)
@@ -111,7 +110,18 @@ class WebBotGenerator(object):
 
 	@cherrypy.tools.accept(media='text/plain')
 	def POST(self, CMD='', CommandValue=10):
-		RunCommand(CMD, int(CommandValue))
+		if CMD == 'OPN' or CMD == 'CLS':
+			CommandValue = 1
+		if CMD == 'LS+':
+			pfio.digital_write(0,1)
+		elif CMD == 'LS-':
+			pfio.digital_write(0,0)
+		elif CMD == 'HLT':
+			pfio.digital_write(1,1)
+			time.sleep(1)
+			pfio.digital_write(1,0)
+		else:
+			RunLegoCommand(CMD, int(CommandValue))
 		response = 'Command received: ' + CMD + str(CommandValue)
 		return response
 
@@ -137,124 +147,3 @@ webapp.generator = WebBotGenerator()
 cherrypy.quickstart(webapp, '/', conf)
 
 
-
-
-
-'''
-#main loop
-seconds = 0
-ClawPos = 0
-laser = 0 #0 means laser is off
-#laser_status = [Fore.BLACK + "Off", Fore.YELLOW + "On (EXTREME DANGER)"]
-headlights = 0 #0 is off, 1 is white, 2 is disco
-#headlights_status = ["Off", Fore.WHITE + "On (white)", Fore.YELLOW + "Disco Mode"]
-
-
-
-
-print (Back.BLUE + Style.BRIGHT)
-print ("WELCOME TO BEERBOT")
-print ("jweob 23/7/2014")
-print (Back.RESET)
-while 1:
-# Get the instruction:
-    Command = raw_input(Fore.WHITE + Style.BRIGHT + "Commands are: wasd to move, r and f for claw, t to toggle LASER, h to cycle headlights, q for quit\nFor wasd you can append a number for cm moved (w & s) or degrees rotated (a & d)\nIf you just enter the letter on its own default move is 10cm or 10 degrees\nCommand+Enter>"  + Fore.RESET + Style.RESET_ALL)
-    
-    if Command == "":
-        CommandStart = Command
-    else:
-        CommandStart = Command[0]
-
-    if ((len(Command) > 1) and is_number(Command[1:])):
-        print ("Custom Command Accepted")
-        CommandValue = int(Command[1:])
-    else:
-        CommandValue = 0
-                
-    if CommandStart == "w":
-        print ("Forward!")
-        seconds = 0
-        if CommandValue == 0:
-            CommandValue = 10
-            
-    elif CommandStart == "s":
-        print ("Retreat!")
-        seconds = 5        
-        if CommandValue == 0:
-            CommandValue = 10
-                          
-    elif CommandStart == "a":
-        print ("Left!")
-        seconds = 1
-        if CommandValue == 0:
-            CommandValue = 10
-                                      
-    elif CommandStart ==  "d":               
-        print ("Right!")
-        seconds = 2
-        if CommandValue == 0:
-            CommandValue = 10
-                
-    elif CommandStart == "r":
-        if ClawPos == 3:
-            print("Claw already closed all the way!")
-        else:
-            ClawPos = ClawPos + 1
-            print ("Claw!")
-            seconds = 3
-            if CommandValue == 0:
-                CommandValue = 1
-                
-    elif CommandStart == "f":
-        ClawPos = ClawPos - 1
-        print ("Unclaw!")
-        seconds = 4
-        if CommandValue == 0:
-            CommandValue = 1
-
-    elif CommandStart == "t":
-        seconds = 99
-        if CommandValue == 0:
-            CommandValue = 1
-        if laser == 0:
-            print ("LASER ON!")
-            pfio.digital_write(0,1)
-            laser = 1
-        elif laser ==1:
-            print ("LASER OFF (awwww...!)")
-            pfio.digital_write(0,0)
-            laser =0
-
-    elif CommandStart == "h":
-        seconds = 99
-        if CommandValue == 0:
-            CommandValue = 1
-        pfio.digital_write(1,1)
-        time.sleep(1)
-        pfio.digital_write(1,0)
-            
-        if headlights == 0:
-            print ("Headlights on (white)")
-            headlights = 1
-        elif headlights == 1:
-            print ("Headlights on (disco)")
-            headlights = 2
-        elif headlights == 2:
-            print ("Headlights off")
-            headlights = 0    
-                
-    elif (CommandStart == ""  or CommandStart == "\n"):
-	print ("Nothing entered")
-
-                
-    elif CommandStart == "q":
-        print ("Goodbye!" + Fore.RESET + Back.RESET + Style.RESET_ALL)
-        colorama.deinit()
-        break
-
-    print( "---Status Report Begins---")
-    print (Back.BLUE + Style.BRIGHT + Fore.WHITE + "Beerfinder range:"), Ultrasonic(b, PORT_2).get_sample(), ("cm"), (Back.RED + " Laser status: "), laser_status[laser],( Back.MAGENTA + Fore.BLACK + " Headlights status: "), headlights_status[headlights], Fore.RESET + Back.RESET +Style.RESET_ALL, (" ")
-    print("---Status Report Ends---" + Fore.RESET + Back.RESET)
-'''
-                
-#RunCommand
