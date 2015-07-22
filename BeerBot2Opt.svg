@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg id="svg3715" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="189.26mm" width="110.6mm" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 391.89836 670.5995">
+ <g id="layer1" transform="translate(-148.6 -222.26)">
+  <circle id="Light1" cx="244.64" stroke="#000" cy="802.18" r="5"/>
+  <circle id="Light2" cx="256.79" stroke="#000" cy="802.18" r="5"/>
+  <circle id="Light3" cx="268.93" stroke="#000" cy="802.18" r="5"/>
+  <path id="LightBeam" d="m186.4-13.457a85 15 0 0 0 -84.717 14h-0.2832l0.19 0.332a85 15 0 0 0 -0.18945 0.66797 85 15 0 0 0 2.6758 3.6816l77.324 135.32h15l72.611-135.54a85 15 0 0 0 2.3887 -3.4609 85 15 0 0 0 -0.14649 -0.72656l0.14649-0.27344h-0.20117a85 15 0 0 0 -84.81 -14.001z" transform="translate(148.6 261.82)" stroke="#000" fill="#ff0"/>
+  <g id="Laser" stroke="#f00">
+   <g id="g5324">
+    <path id="path5312" d="m336 400.36v-160" fill-rule="evenodd" stroke-width="4" fill="#f00"/>
+    <g id="g5320" transform="matrix(.73657 0 0 .76335 85.818 61.595)" stroke-width="5.3345" fill="none">
+     <path id="path5314" d="m320 252.36 20-20 20 20"/>
+     <path id="path5318" d="m360 212.36-20 20-20-20"/>
+    </g>
+   </g>
+   <circle id="path5330" stroke-width="4" cy="239.51" cx="335.56" r="5" fill="#f00"/>
+  </g>
+  <path id="path4331" d="m199 731.36-25-15-15-15-5-15 5-10 10-15 10-5h15" stroke="#666" stroke-width="10" fill="none"/>
+  <rect id="rect5278-6" height="10" width="80" stroke="#000" y="549.96" x="442.19" fill="#808080"/>
+  <rect id="rect5278" height="10" width="80" stroke="#000" y="550.36" x="160" fill="#808080"/>
+  <rect id="rect3800-0" ry="11.971" height="101.51" width="42.099" stroke="#000" y="505.39" x="158.11"/>
+  <rect id="rect3800-0-1" ry="11.971" height="101.51" width="42.099" stroke="#000" y="505.39" x="488.11"/>
+  <g id="g3817-3-9" stroke="#000" transform="translate(235.22 .90863)">
+   <rect id="rect3794-2-3" ry="3.534" height="34.962" width="43.176" y="537.38" x="203.91" fill="#f60"/>
+   <rect id="rect3798-0-8" ry="3.534" height="65" width="75" y="642.36" x="188" fill="#e6e6e6"/>
+   <rect id="rect3792-2-6" ry="3.5379" height="170" width="30" y="537.36" x="210.5" fill="#e6e6e6"/>
+   <rect id="rect3796-1-2" ry="3.534" height="85" width="40" y="622.36" x="205.5" fill="#e6e6e6"/>
+   <rect id="rect3800-3-7" ry="3.5386" height="30.006" width="9.8797" y="552.72" x="220.29" fill="#e6e6e6"/>
+  </g>
+  <g id="g3817" stroke="#000">
+   <rect id="rect3794" ry="3.534" height="34.962" width="43.176" y="537.38" x="203.91" fill="#f60"/>
+   <rect id="rect3798" ry="3.534" height="65" width="75" y="642.36" x="188" fill="#e6e6e6"/>
+   <rect id="rect3792" ry="3.5379" height="170" width="30" y="537.36" x="210.5" fill="#e6e6e6"/>
+   <rect id="rect3796" ry="3.534" height="85" width="40" y="622.36" x="205.5" fill="#e6e6e6"/>
+   <rect id="rect3800" ry="3.5386" height="30.006" width="9.8797" y="552.72" x="220.29" fill="#e6e6e6"/>
+  </g>
+  <rect id="rect5295-4" height="30.053" width="223.79" stroke="#000" y="551.93" x="230.18" stroke-width=".94696" fill="#333"/>
+  <rect id="rect5295" height="30" width="250" stroke="#000" y="642.36" x="220" fill="#333"/>
+  <g id="g5273" stroke="#000" transform="translate(1.2627 5.5558)">
+   <rect id="rect5266" ry="0" height="59.968" width="15.978" y="398.82" x="327.92" stroke-width="1.0318" fill="#800000"/>
+   <g id="g5270">
+    <rect id="rect5268" height="4.9708" width="15.981" stroke="#000" y="393.85" x="327.87" stroke-width="1.0292" fill="#808080"/>
+   </g>
+  </g>
+  <path id="path4333" d="m446 722.36h40l20 10 10 10v20 20l-20 20-20 10s-24.343 12.828-30 10c-5.6568-2.8284-2-6-2-6l-4-16" stroke="#000" stroke-width="10" fill="none"/>
+  <path id="path4354" d="m388 794.47 30 10.893h25l10 5 10 20v20l-10 10-20 5-25-5-10-5" stroke="#999" stroke-width="10" fill="none"/>
+  <rect id="rect4130" ry=".000027898" height="207.09" width="143.89" stroke="#000" y="552.39" x="270.03" fill="#e6e6e6"/>
+  <rect id="rect4373" ry=".000018291" height="20" width="50" stroke="#666" y="872.36" x="315" fill="#333"/>
+  <path id="path4329" d="m470 492.36h15l-5 15-20 30-25 35v-25l25-35 10-15z" fill-rule="evenodd" stroke="#000"/>
+  <path id="LeftClaw" d="m347 262.36-10 2-12 4-14 7-13 7-11 10-10 9-4 6v4l-3 11-4 17-3 15v5l-2 1v3l2 5 10 15 10 15 5 6 10 1-6 18 15 4 5-16 1-10v-13-8l-2-3-5-6-11-18-3-4v-5-5-7l2-6 4-10 4-5 6-8 11-12 13-11 14-9 2-8-1-1zm-62.5 40a7.5 7.5 0 0 1 7.5 7.5 7.5 7.5 0 0 1 -7.5 7.5 7.5 7.5 0 0 1 -7.5 -7.5 7.5 7.5 0 0 1 7.5 -7.5zm-2.5 57 6 2 17 26-5 5h-10l-20-30 6-2 6-1z" fill-rule="evenodd" stroke="#000" fill="#b3b3b3"/>
+  <rect id="rect4134" ry=".000027002" height="40" width="20" stroke="#000" y="482.36" x="295" fill="#666"/>
+  <rect id="rect4136" ry=".000027002" height="45" width="15" stroke="#000" y="467.36" x="270" fill="#e6e6e6"/>
+  <rect id="rect4138" ry=".000027002" height="40" width="40" stroke="#000" y="472.36" x="285" fill="#666"/>
+  <rect id="rect4132" ry=".000027002" height="9.6797" width="90.037" stroke="#000" y="482.52" x="231.59" fill="#666"/>
+  <rect id="rect4086" ry=".000022160" height="220.52" width="10.672" stroke="#000" y="396.52" x="258.33" fill="#e6e6e6"/>
+  <rect id="rect4086-9" ry=".000022160" height="220.52" width="10.672" stroke="#000" y="451.16" x="246.9" fill="#e6e6e6"/>
+  <rect id="rect4111" ry=".000024248" height="40" width="15" stroke="#000" y="412.36" x="275"/>
+  <rect id="rect4013" ry=".000022107" height="15" width="35" stroke="#000" y="667.36" x="370" fill="#b3b3b3"/>
+  <circle id="path4088" cx="282.5" stroke="#000" cy="431.86" r="7.5" fill="#ccc"/>
+  <rect id="rect4090" ry=".000022160" height="10" width="45" stroke="#000" y="459.36" x="277" fill="#666"/>
+  <rect id="rect4092" ry=".000022160" height="30" width="10" stroke="#000" y="429.01" x="312" fill="#666"/>
+  <rect id="rect4094" ry=".000024248" height="49.242" width="9.9562" stroke="#000" y="410.1" x="291.02" fill="#b3b3b3"/>
+  <rect id="rect4092-7" ry=".000022160" height="30" width="10" stroke="#000" y="429.01" x="301.64" fill="#666"/>
+  <circle id="path4113" cx="270" stroke="#000" cy="432.36" r="5.6494"/>
+  <path id="path4065" d="m360 797.36 20 5 15-5-15-15v-20l10-55 5-10h20l5-10v-20-5l5-5" stroke="#d40000" fill="none"/>
+  <g id="RightClaw" transform="matrix(-1 0 0 1 938.91 7.0711)" stroke="#000">
+   <path id="path4142-2" d="m611.56 256.4-10 2-12 4-14 7-13 7-11 10-10 9-4 6v4l-3 11-4 17-3 15v5l-2 1v3l2 5 10 15 10 15 5 6 10 1-6 18 15 4 5-16 1-10v-13-8l-2-3-5-6-11-18-3-4v-5-5-7l2-6 4-10 4-5 6-8 11-12 13-11 14-9 2-8-1-1zm-62.5 40a7.5 7.5 0 0 1 7.5 7.5 7.5 7.5 0 0 1 -7.5 7.5 7.5 7.5 0 0 1 -7.5 -7.5 7.5 7.5 0 0 1 7.5 -7.5zm-2.5 57 6 2 17 26-5 5h-10l-20-30 6-2 6-1z" fill-rule="evenodd" fill="#b3b3b3"/>
+   <rect id="rect4134-3" ry=".000027002" height="40" width="20" y="476.4" x="559.56" fill="#666"/>
+   <rect id="rect4136-4" ry=".000027002" height="45" width="15" y="461.4" x="534.56" fill="#e6e6e6"/>
+   <rect id="rect4138-1" ry=".000027002" height="40" width="40" y="466.4" x="549.56" fill="#666"/>
+   <rect id="rect4132-5" ry=".000027002" height="9.6797" width="90.037" y="476.56" x="496.15" fill="#666"/>
+   <rect id="rect4111-6" ry=".000024248" height="40" width="15" y="406.4" x="539.56"/>
+   <circle id="path4088-9" cy="425.9" cx="547.06" r="7.5" fill="#ccc"/>
+   <rect id="rect4090-4" ry=".000022160" height="10" width="45" y="453.4" x="541.56" fill="#666"/>
+   <rect id="rect4092-9" ry=".000022160" height="30" width="10" y="423.05" x="576.56" fill="#666"/>
+   <rect id="rect4094-4" ry=".000024248" height="49.242" width="9.9562" y="404.14" x="555.58" fill="#b3b3b3"/>
+   <rect id="rect4092-7-3" ry=".000022160" height="30" width="10" y="423.05" x="566.2" fill="#666"/>
+   <circle id="path4113-9" cy="426.4" cx="534.56" r="5.6494"/>
+  </g>
+  <g id="g3817-3" stroke="#000" transform="translate(111.02 -123.84)">
+   <rect id="rect3794-2" ry="3.534" height="34.962" width="43.176" y="537.38" x="203.91" fill="#f60"/>
+   <rect id="rect3798-0" ry="3.534" height="65" width="75" y="642.36" x="188" fill="#e6e6e6"/>
+   <rect id="rect3792-2" ry="3.5379" height="170" width="30" y="537.36" x="210.5" fill="#e6e6e6"/>
+   <rect id="rect3796-1" ry="3.534" height="85" width="40" y="622.36" x="205.5" fill="#e6e6e6"/>
+   <rect id="rect3800-3" ry="3.5386" height="30.006" width="9.8797" y="552.72" x="220.29" fill="#e6e6e6"/>
+   <rect id="rect4413" ry="3.534" height="50" width="30" y="656.2" x="208.98" fill="#4d4d4d"/>
+   <rect id="rect4413-2" ry="3.534" height="50" width="30" y="779.06" x="99.699" fill="#4d4d4d"/>
+  </g>
+  <rect id="rect4356" ry=".000018291" height="95" width="10" stroke="#666" y="797.36" x="315" fill="#ccc"/>
+  <rect id="rect4356-6" ry=".000018291" height="95" width="10" stroke="#666" y="797.36" x="355.91" fill="#ccc"/>
+  <rect id="rect4335" ry=".000011734" height="50" width="120" stroke="#666" y="812.36" x="280" fill="#e6e6e6"/>
+  <rect id="rect4337" ry=".000018291" height="15.588" width="55.689" stroke="#666" y="838.54" x="312.07" fill="#e6e6e6"/>
+  <rect id="rect4337-5" ry=".000018291" height="15.588" width="55.689" stroke="#666" y="829.45" x="312.28" fill="#1a1a1a"/>
+  <path id="path4375" d="m300 672.36 20-10 20-20 10-20-10-50-20-110h30l10 110v40l-10 40-20 30-30 20z" fill-rule="evenodd" stroke="#000" fill="#ccc"/>
+  <rect id="rect4377" ry=".000021212" height="7.6034" width="49.827" stroke="#000" y="454.7" x="311.98" fill="#008000"/>
+  <rect id="rect4379" ry=".000021212" height="5" width="20" stroke="#666" y="449.64" x="326.52"/>
+  <rect id="rect4381" ry=".000021292" height="75.281" width="10.306" stroke="#000" y="542.22" x="287.76"/>
+  <rect id="rect4381-7" ry=".000021292" height="75.281" width="10.306" stroke="#000" y="542.22" x="287.76" fill="#4d4d4d"/>
+  <rect id="rect4381-7-5" ry=".000021292" height="75.281" width="10.306" stroke="#000" y="541.61" x="375.19" fill="#4d4d4d"/>
+  <g id="g4150" stroke="#000">
+   <rect id="rect3886" ry="2.5685" height="127.42" width="211.7" y="672.38" x="236.02" fill="#008000"/>
+   <rect id="rect3888" ry=".000022107" height="40" width="20" y="702.36" x="306"/>
+   <rect id="rect3890" ry=".000022107" height="30" width="20" y="702.36" x="336"/>
+   <rect id="rect3892" ry="2.5685" height="40" width="50" y="707.36" x="376"/>
+   <rect id="rect3894" ry="2.5685" height="40" width="50" y="747.36" x="376"/>
+   <rect id="rect3896" ry="2.5685" height="30" width="15" y="712.54" x="431" fill="#ccc"/>
+   <rect id="rect3898" ry="2.5685" height="30" width="15" y="747.36" x="431" fill="#ccc"/>
+   <rect id="rect3902" ry=".000022107" height="15" width="15" y="762.36" x="246" fill="#999"/>
+   <circle id="path3904" cy="769.86" cx="253.5" r="5"/>
+   <g id="g3942" transform="translate(-24)">
+    <rect id="rect3902-7" ry=".000022107" height="15" width="15" y="762.36" x="270" fill="#999"/>
+    <circle id="path3904-2" cx="277.5" cy="769.86" r="5"/>
+   </g>
+   <g id="g3942-4" transform="translate(-6.5595)">
+    <rect id="rect3902-7-3" ry=".000022107" height="15" width="15" y="762.36" x="270" fill="#999"/>
+    <circle id="path3904-2-1" cx="277.5" cy="769.86" r="5"/>
+   </g>
+   <g id="g3942-4-6" transform="translate(10.881)">
+    <rect id="rect3902-7-3-5" ry=".000022107" height="15" width="15" y="762.36" x="270" fill="#999"/>
+    <circle id="path3904-2-1-6" cx="277.5" cy="769.86" r="5"/>
+   </g>
+   <g id="g3942-4-6-2" transform="translate(28.321)">
+    <rect id="rect3902-7-3-5-0" ry=".000022107" height="15" width="15" y="762.36" x="270" fill="#999"/>
+    <circle id="path3904-2-1-6-1" cx="277.5" cy="769.86" r="5"/>
+   </g>
+   <rect id="rect4009" ry=".000022107" height="30" width="35" y="722.36" x="231" fill="#b3b3b3"/>
+   <rect id="rect4011" ry=".000022107" height="35" width="55" y="672.36" x="241" fill="#b3b3b3"/>
+   <g id="g4053" fill="#b3b3b3" transform="translate(-24,-5)">
+    <circle id="path4015" cx="377.5" cy="679.86" r="2.5"/>
+    <circle id="path4015-5" cx="384.4" cy="679.86" r="2.5"/>
+    <circle id="path4015-55" cx="391.31" cy="679.86" r="2.5"/>
+    <circle id="path4015-55-4" cx="398.21" cy="679.86" r="2.5"/>
+   </g>
+   <rect id="rect4059" ry=".000022107" height="25" width="25" y="767.36" x="321" fill="#ff0"/>
+   <rect id="rect4061" ry=".000022107" height="15" width="75" y="787.36" x="241" fill="#b3b3b3"/>
+   <circle id="path4063" cy="762.86" cx="363.5" r="7.5" fill="#b3b3b3"/>
+   <rect id="rect4067" ry=".000022107" height="25" width="25" y="722.36" x="196" fill="#e6e6e6"/>
+   <rect id="rect4069" ry=".000022107" height="25" width="10" y="722.36" x="221" fill="#ccc"/>
+   <rect id="rect3896-2" ry="2.5685" height="30" width="15" y="677.72" x="430.29" fill="#ccc"/>
+  </g>
+  <rect id="rect4413-2-6" ry="3.534" height="50" width="30" stroke="#000" y="658.08" x="445.29" fill="#4d4d4d"/>
+  <rect id="rect3884" ry="2.386" height="10.127" width="265.18" stroke="#000" y="651.27" x="218.91" fill="#e6e6e6"/>
+  <g id="g4296" transform="matrix(-1 0 0 1 665.81 21.213)" stroke="#000" fill="#e6e6e6">
+   <rect id="rect4086-1" ry=".000022160" height="220.52" width="10.672" y="346.52" x="238.33"/>
+   <rect id="rect4086-9-5" ry=".000022160" height="220.52" width="10.672" y="401.16" x="226.9"/>
+  </g>
+  <rect id="rect4323" ry=".000011734" height="15" width="45" stroke="#000" y="477.36" x="462.5" fill="#b3b3b3"/>
+  <path id="rect4300" d="m430 412.36v40h25v30h60v-30h25v-40h-110z" stroke="#000" fill="#f2f2f2"/>
+  <rect id="rect4302" ry=".000022160" height="10" width="110" stroke="#000" y="402.36" x="430" fill="#b3b3b3"/>
+  <rect id="rect4304" ry=".000011734" height="5.2952" width="22.998" stroke="#000" y="397.18" x="432.92" fill="#f60"/>
+  <rect id="rect4304-1" ry=".000011734" height="5.2952" width="22.998" stroke="#000" y="397" x="510.32" fill="#f60"/>
+  <path id="path5316" d="m340 232.36z" stroke="#000" stroke-width="1px" fill="none"/>
+  <g id="LeftWheel1" fill-rule="evenodd" transform="translate(0,2)" stroke="#b3b3b3" stroke-width="1px" fill="#b3b3b3">
+   <path id="path5340" d="m161.79 584.59h35"/>
+   <path id="path5340-0" d="m161.79 592.23h35"/>
+   <path id="path5340-3" d="m161.79 512.93h35"/>
+   <path id="path5340-8" d="m161.79 516.57h35"/>
+   <path id="path5340-08" d="m161.79 529.84h35"/>
+   <path id="path5340-85" d="m161.79 573.31h35"/>
+   <path id="path5340-4" d="m161.79 578.95h35"/>
+   <path id="path5340-2" d="m161.79 509.29h35"/>
+   <path id="path5340-88" d="m161.79 595.87h35"/>
+   <path id="path5340-8-1" d="m161.79 535.48h35"/>
+   <path id="path5340-8-17" d="m161.79 524.21h35"/>
+   <path id="path5340-8-1-5" d="m161.79 541.12h35"/>
+   <path id="path5340-8-1-2" d="m161.79 546.76h35"/>
+   <path id="path5340-8-1-3" d="m161.79 554.4h35"/>
+   <path id="path5340-8-1-4" d="m161.79 562.04h35"/>
+   <path id="path5340-8-1-59" d="m161.79 567.67h35"/>
+   <path id="path5340-88-6" d="m161.79 599.51h35"/>
+  </g>
+  <g id="LeftWheel2" fill-rule="evenodd" transform="translate(0 1)" stroke="#b3b3b3" stroke-width="1px" fill="#b3b3b3">
+   <path id="path5340-47" d="m161.79 584.59h35"/>
+   <path id="path5340-0-9" d="m161.79 592.23h35"/>
+   <path id="path5340-3-1" d="m161.79 512.93h35"/>
+   <path id="path5340-8-8" d="m161.79 516.57h35"/>
+   <path id="path5340-08-8" d="m161.79 529.84h35"/>
+   <path id="path5340-85-6" d="m161.79 573.31h35"/>
+   <path id="path5340-4-2" d="m161.79 578.95h35"/>
+   <path id="path5340-2-2" d="m161.79 509.29h35"/>
+   <path id="path5340-88-8" d="m161.79 595.87h35"/>
+   <path id="path5340-8-1-31" d="m161.79 535.48h35"/>
+   <path id="path5340-8-17-0" d="m161.79 524.21h35"/>
+   <path id="path5340-8-1-5-3" d="m161.79 541.12h35"/>
+   <path id="path5340-8-1-2-0" d="m161.79 546.76h35"/>
+   <path id="path5340-8-1-3-0" d="m161.79 554.4h35"/>
+   <path id="path5340-8-1-4-0" d="m161.79 562.04h35"/>
+   <path id="path5340-8-1-59-7" d="m161.79 567.67h35"/>
+   <path id="path5340-88-6-2" d="m161.79 599.51h35"/>
+  </g>
+  <g id="LeftWheel3" fill-rule="evenodd" transform="translate(.052038 -0.0127)" stroke="#b3b3b3" stroke-width="1px" fill="#b3b3b3">
+   <path id="path5340-47-1" d="m161.79 584.59h35"/>
+   <path id="path5340-0-9-9" d="m161.79 592.23h35"/>
+   <path id="path5340-3-1-0" d="m161.79 512.93h35"/>
+   <path id="path5340-8-8-4" d="m161.79 516.57h35"/>
+   <path id="path5340-08-8-1" d="m161.79 529.84h35"/>
+   <path id="path5340-85-6-1" d="m161.79 573.31h35"/>
+   <path id="path5340-4-2-3" d="m161.79 578.95h35"/>
+   <path id="path5340-2-2-7" d="m161.79 509.29h35"/>
+   <path id="path5340-88-8-7" d="m161.79 595.87h35"/>
+   <path id="path5340-8-1-31-9" d="m161.79 535.48h35"/>
+   <path id="path5340-8-17-0-0" d="m161.79 524.21h35"/>
+   <path id="path5340-8-1-5-3-0" d="m161.79 541.12h35"/>
+   <path id="path5340-8-1-2-0-2" d="m161.79 546.76h35"/>
+   <path id="path5340-8-1-3-0-7" d="m161.79 554.4h35"/>
+   <path id="path5340-8-1-4-0-5" d="m161.79 562.04h35"/>
+   <path id="path5340-8-1-59-7-0" d="m161.79 567.67h35"/>
+   <path id="path5340-88-6-2-9" d="m161.79 599.51h35"/>
+  </g>
+  <g id="RightWheel1" fill-rule="evenodd" transform="translate(330.12 1.4924)" stroke="#b3b3b3" stroke-width="1px" fill="#b3b3b3">
+   <path id="path5340-7" d="m161.79 584.59h35"/>
+   <path id="path5340-0-4" d="m161.79 592.23h35"/>
+   <path id="path5340-3-16" d="m161.79 512.93h35"/>
+   <path id="path5340-8-6" d="m161.79 516.57h35"/>
+   <path id="path5340-08-0" d="m161.79 529.84h35"/>
+   <path id="path5340-85-67" d="m161.79 573.31h35"/>
+   <path id="path5340-4-8" d="m161.79 578.95h35"/>
+   <path id="path5340-2-8" d="m161.79 509.29h35"/>
+   <path id="path5340-88-5" d="m161.79 595.87h35"/>
+   <path id="path5340-8-1-47" d="m161.79 535.48h35"/>
+   <path id="path5340-8-17-08" d="m161.79 524.21h35"/>
+   <path id="path5340-8-1-5-6" d="m161.79 541.12h35"/>
+   <path id="path5340-8-1-2-8" d="m161.79 546.76h35"/>
+   <path id="path5340-8-1-3-01" d="m161.79 554.4h35"/>
+   <path id="path5340-8-1-4-6" d="m161.79 562.04h35"/>
+   <path id="path5340-8-1-59-75" d="m161.79 567.67h35"/>
+   <path id="path5340-88-6-24" d="m161.79 599.51h35"/>
+  </g>
+  <g id="RightWheel2" fill-rule="evenodd" transform="translate(330.12 .49238)" stroke="#b3b3b3" stroke-width="1px" fill="#b3b3b3">
+   <path id="path5340-47-6" d="m161.79 584.59h35"/>
+   <path id="path5340-0-9-6" d="m161.79 592.23h35"/>
+   <path id="path5340-3-1-9" d="m161.79 512.93h35"/>
+   <path id="path5340-8-8-6" d="m161.79 516.57h35"/>
+   <path id="path5340-08-8-2" d="m161.79 529.84h35"/>
+   <path id="path5340-85-6-5" d="m161.79 573.31h35"/>
+   <path id="path5340-4-2-4" d="m161.79 578.95h35"/>
+   <path id="path5340-2-2-9" d="m161.79 509.29h35"/>
+   <path id="path5340-88-8-9" d="m161.79 595.87h35"/>
+   <path id="path5340-8-1-31-1" d="m161.79 535.48h35"/>
+   <path id="path5340-8-17-0-2" d="m161.79 524.21h35"/>
+   <path id="path5340-8-1-5-3-8" d="m161.79 541.12h35"/>
+   <path id="path5340-8-1-2-0-8" d="m161.79 546.76h35"/>
+   <path id="path5340-8-1-3-0-76" d="m161.79 554.4h35"/>
+   <path id="path5340-8-1-4-0-0" d="m161.79 562.04h35"/>
+   <path id="path5340-8-1-59-7-6" d="m161.79 567.67h35"/>
+   <path id="path5340-88-6-2-8" d="m161.79 599.51h35"/>
+  </g>
+  <g id="RightWheel3" fill-rule="evenodd" transform="translate(330.12 -.52032)" stroke="#b3b3b3" stroke-width="1px" fill="#b3b3b3">
+   <path id="path5340-47-1-1" d="m161.79 584.59h35"/>
+   <path id="path5340-0-9-9-1" d="m161.79 592.23h35"/>
+   <path id="path5340-3-1-0-3" d="m161.79 512.93h35"/>
+   <path id="path5340-8-8-4-0" d="m161.79 516.57h35"/>
+   <path id="path5340-08-8-1-5" d="m161.79 529.84h35"/>
+   <path id="path5340-85-6-1-2" d="m161.79 573.31h35"/>
+   <path id="path5340-4-2-3-4" d="m161.79 578.95h35"/>
+   <path id="path5340-2-2-7-1" d="m161.79 509.29h35"/>
+   <path id="path5340-88-8-7-6" d="m161.79 595.87h35"/>
+   <path id="path5340-8-1-31-9-5" d="m161.79 535.48h35"/>
+   <path id="path5340-8-17-0-0-4" d="m161.79 524.21h35"/>
+   <path id="path5340-8-1-5-3-0-1" d="m161.79 541.12h35"/>
+   <path id="path5340-8-1-2-0-2-9" d="m161.79 546.76h35"/>
+   <path id="path5340-8-1-3-0-7-1" d="m161.79 554.4h35"/>
+   <path id="path5340-8-1-4-0-5-0" d="m161.79 562.04h35"/>
+   <path id="path5340-8-1-59-7-0-9" d="m161.79 567.67h35"/>
+   <path id="path5340-88-6-2-9-2" d="m161.79 599.51h35"/>
+  </g>
+ </g>
+</svg>
