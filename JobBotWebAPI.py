@@ -20,18 +20,18 @@ class MyBaseMotor(object):
         if self.debug:
             print message
 
-    def ramped_turn(self, min_power, max_power, tacho_units, ramp_units, step_levels=5):
+    def ramped_turn(self, min_power, max_power, tacho_units, ramp_units, step_levels=2):
         ramp_units_per_level = ramp_units / step_levels
         power_units_per_level = (max_power - min_power) / step_levels
-        for i in range(0, step_levels):
+        for i in range(0, step_levels, brake=False):
             self.turn(min_power + power_units_per_level * step_levels, ramp_units_per_level)
 
 
         remaining_units = tacho_units - ramp_units * 2
         if remaining_units > 0:
-            self.turn(max_power, tacho_units - ramp_units * 2)
+            self.turn(max_power, tacho_units - ramp_units * 2, brake=False)
 
-        for i in range(0, step_levels):
+        for i in range(0, step_levels, brake=False):
             self.turn(max_power - power_units_per_level * step_levels, ramp_units_per_level)
 
 
@@ -268,7 +268,7 @@ def turnmotor(m, power, degrees):
         ramp_degrees = degrees / 2
     else:
         ramp_degrees = 50
-    m.ramped_turn(10, power, degrees, ramp_degrees)
+    m.ramped_turn(power/10, power, degrees, ramp_degrees)
 
 def is_number(s):
     try:
