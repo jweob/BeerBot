@@ -20,6 +20,11 @@ class MyBaseMotor(object):
         if self.debug:
             print message
 
+    def ramped_turn(self, min_power, max_power, tacho_units, ramp_units):
+        self.turn(min_power, ramp_units)
+        self.turn(max_power, tacho_units - ramp_units * 2)
+        self.turn(min_power, ramp_units)
+
     def turn(self, power, tacho_units, brake=True, timeout=1, emulate=True):
         """Use this to turn a motor. The motor will not stop until it turns the
         desired distance. Accuracy is much better over a USB connection than
@@ -38,7 +43,6 @@ class MyBaseMotor(object):
                  may lead to strange behavior, especially with synced motors
         """
 
-        print 'Working!!!'
         tacho_limit = tacho_units
 
         if tacho_limit < 0:
@@ -90,7 +94,7 @@ class MyBaseMotor(object):
                         if tacho.is_near(tacho_target, threshold):
                             break
                         else:
-                            raise BlockedException("Blocked!")
+                            raise motor.BlockedException("Blocked!")
                 else:
                     self._debug_out(('advancing', last_tacho, tacho))
                 if tacho.is_near(tacho_target, threshold) or tacho.is_greater(tacho_target, direction):
@@ -250,7 +254,7 @@ if brick:
     motors = [mx, my, mz]
 
 def turnmotor(m, power, degrees):
-    m.turn(power, degrees)
+    m.ramped_turn(10, power, degrees)
 
 def is_number(s):
     try:
