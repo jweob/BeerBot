@@ -24,6 +24,7 @@ class MyBaseMotor(object):
         ramp_units_per_level = ramp_units / step_levels
         power_units_per_level = (max_power - min_power) / step_levels
         for i in range(0, step_levels):
+            print min_power + power_units_per_level * step_levels
             self.turn(min_power + power_units_per_level * step_levels, ramp_units_per_level, brake=False)
 
 
@@ -32,6 +33,7 @@ class MyBaseMotor(object):
             self.turn(max_power, tacho_units - ramp_units * 2, brake=False)
 
         for i in range(0, step_levels):
+            print max_power - power_units_per_level * step_levels
             self.turn(max_power - power_units_per_level * step_levels, ramp_units_per_level, brake=False)
 
 
@@ -268,7 +270,7 @@ def turnmotor(m, power, degrees):
         ramp_degrees = degrees / 2
     else:
         ramp_degrees = 250
-    m.ramped_turn(power/80, power, degrees, ramp_degrees)
+    m.ramped_turn(10, power, degrees, ramp_degrees)
 
 def is_number(s):
     try:
