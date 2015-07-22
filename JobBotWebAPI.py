@@ -20,7 +20,7 @@ class MyBaseMotor(object):
         if self.debug:
             print message
 
-    def ramped_turn(self, min_power, max_power, tacho_units, ramp_units, step_levels=5):
+    def ramped_turn(self, min_power, max_power, tacho_units, ramp_units, step_levels=2):
         ramp_units_per_level = ramp_units / step_levels
         power_units_per_level = (max_power - min_power) / step_levels
         print 'Min power ' + str(min_power)
