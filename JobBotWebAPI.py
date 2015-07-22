@@ -11,7 +11,7 @@ import nxt, thread, time
 from colorama import init, Fore, Back, Style
 
 brick = True
-
+# Test commit
 try:
     b = nxt.find_one_brick()
 except:
