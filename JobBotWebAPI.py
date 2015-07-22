@@ -2,18 +2,28 @@
 #jweob 16/12/14
 #Based on the example Script to control a NXT 2-axis CNC "Pancake maker"Written 2/3/11 by Marcus Wanner
 
-#Import piface module to allow laser and LED control
-import pifacedigitalio as pfio
-
-#Import colorama
-from colorama import init, Fore, Back, Style
-init()
 
 #Import nxt library to control the lego
 import nxt.locator
 from nxt.sensor import *
 import nxt, thread, time
-b = nxt.find_one_brick()
+#Import colorama
+from colorama import init, Fore, Back, Style
+
+brick = True
+
+try:
+    b = nxt.find_one_brick()
+except:
+    print "Brick not connected"
+    brick = False
+
+try:
+    #Initialise piface
+    pfio.init()
+    init()
+except:
+    print "PiFace not connected"
 
 #import cherrypy for web stuff
 import cherrypy
@@ -28,17 +38,14 @@ cherrypy.engine.start()
 import os, os.path
 
 
-#Initialise piface
-pfio.init()
-
-
 #Set up directory for html files
 MEDIA_DIR = os.path.join(os.path.abspath("."), "Media")
 
-mx = nxt.Motor(b, nxt.PORT_A)
-my = nxt.Motor(b, nxt.PORT_B)
-mz = nxt.Motor(b, nxt.PORT_C)
-motors = [mx, my, mz]
+if brick:
+    mx = nxt.Motor(b, nxt.PORT_A)
+    my = nxt.Motor(b, nxt.PORT_B)
+    mz = nxt.Motor(b, nxt.PORT_C)
+    motors = [mx, my, mz]
 
 def turnmotor(m, power, degrees):
     m.turn(power, degrees)
@@ -90,10 +97,13 @@ instructions = (
 length = 10
 
 def runinstruction(i, Value):
-    motorid, speed, degrees = i
-    thread.start_new_thread(
-        turnmotor,
-        (motors[motorid], speed, degrees*Value))
+    if brick:
+        motorid, speed, degrees = i
+        thread.start_new_thread(
+            turnmotor,
+            (motors[motorid], speed, degrees*Value))
+    else:
+        print "Instruction received but no brick: " + str(i) + " " + str(Value)
 
 def RunLegoCommand(CMD, CommandValue):
     for i in instructions:
