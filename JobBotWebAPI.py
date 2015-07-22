@@ -37,7 +37,7 @@ class MyBaseMotor(object):
 
         for step_level in range(0, step_levels):
             print 'Ramping down at ' + str(max_power - power_units_per_level * (step_level + 1))
-            self.turn(max_power - power_units_per_level * (step_level + 1)), ramp_units_per_level, brake=False)
+            self.turn(max_power - power_units_per_level * (step_level + 1), ramp_units_per_level, brake=False)
 
 
     def turn(self, power, tacho_units, brake=True, timeout=1, emulate=True):
