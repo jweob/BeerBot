@@ -21,6 +21,18 @@ class MyBaseMotor(object):
             print message
 
     def ramped_turn(self, min_power, max_power, tacho_units, ramp_units, step_levels=4):
+        """
+        Added this function to split a turn into multiple power levels
+
+        Performs OK, but a bit jerky. Think it is better to include it in the turn function directly
+
+        :param min_power:
+        :param max_power:
+        :param tacho_units:
+        :param ramp_units:
+        :param step_levels:
+        :return:
+        """
         ramp_units_per_level = ramp_units / step_levels
         power_units_per_level = (max_power - min_power) / step_levels
         print 'Min power ' + str(min_power)
