@@ -28,7 +28,7 @@ class MyBaseMotor(object):
         print 'Power units per level ' + str(power_units_per_level)
         for step_level in range(0, step_levels):
             print 'Ramping up at ' + str(min_power + power_units_per_level * step_level)
-            self.turn(min_power + power_units_per_level * step_levels, ramp_units_per_level, brake=False)
+            self.turn(min_power + power_units_per_level * step_level, ramp_units_per_level, brake=False)
 
 
         remaining_units = tacho_units - ramp_units * 2
@@ -36,8 +36,8 @@ class MyBaseMotor(object):
             self.turn(max_power, tacho_units - ramp_units * 2, brake=False)
 
         for step_level in range(0, step_levels):
-            print 'Ramping down at ' + str(max_power - power_units_per_level * step_level)
-            self.turn(max_power - power_units_per_level * step_levels, ramp_units_per_level, brake=False)
+            print 'Ramping down at ' + str(max_power - power_units_per_level * (step_level + 1))
+            self.turn(max_power - power_units_per_level * (step_level + 1)), ramp_units_per_level, brake=False)
 
 
     def turn(self, power, tacho_units, brake=True, timeout=1, emulate=True):
