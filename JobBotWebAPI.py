@@ -273,7 +273,7 @@ def turnmotor(m, power, degrees):
         ramp_degrees = degrees / 2
     else:
         ramp_degrees = 250
-    m.ramped_turn(10, power, degrees, ramp_degrees)
+    m.ramped_turn(power/2, power, degrees, ramp_degrees)
 
 def is_number(s):
     try:
