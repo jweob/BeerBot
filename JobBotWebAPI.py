@@ -256,7 +256,7 @@ if brick:
     motors = [mx, my, mz]
 
 def turnmotor(m, power, degrees):
-    m.ramped_turn(40, power, degrees, 7)
+    m.ramped_turn(40, power, degrees, 100)
 
 def is_number(s):
     try:
