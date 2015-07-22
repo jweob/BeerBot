@@ -22,7 +22,9 @@ class MyBaseMotor(object):
 
     def ramped_turn(self, min_power, max_power, tacho_units, ramp_units):
         self.turn(min_power, ramp_units)
+        time.sleep(0.5)
         self.turn(max_power, tacho_units - ramp_units * 2)
+        time.sleep(0.5)
         self.turn(min_power, ramp_units)
 
     def turn(self, power, tacho_units, brake=True, timeout=1, emulate=True):
@@ -254,7 +256,7 @@ if brick:
     motors = [mx, my, mz]
 
 def turnmotor(m, power, degrees):
-    m.ramped_turn(10, power, degrees, 7)
+    m.ramped_turn(40, power, degrees, 7)
 
 def is_number(s):
     try:
