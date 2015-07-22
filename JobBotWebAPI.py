@@ -8,6 +8,7 @@ import nxt.locator
 from nxt.sensor import *
 import nxt, thread, time
 from nxt import get_tacho_and_state
+from nxt import OutputState
 #Import colorama
 from colorama import init, Fore, Back, Style
 
