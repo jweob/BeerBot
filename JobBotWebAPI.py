@@ -20,14 +20,22 @@ class MyBaseMotor(object):
         if self.debug:
             print message
 
-    def ramped_turn(self, min_power, max_power, tacho_units, ramp_units):
-        self.turn(min_power, ramp_units)
-        time.sleep(0.5)
+    def ramped_turn(self, min_power, max_power, tacho_units, ramp_units, step_levels=5):
+        ramp_units_per_level = ramp_units / step_levels
+        power_units_per_level = (max_power - min_power) / step_levels
+        for i in range(0, step_levels):
+            self.turn(min_power + power_units_per_level * step_levels, ramp_units_per_level)
+            time.sleep(0.5)
+
         remaining_units = tacho_units - ramp_units * 2
         if remaining_units > 0:
             self.turn(max_power, tacho_units - ramp_units * 2)
-        time.sleep(0.5)
-        self.turn(min_power, ramp_units)
+            time.sleep(0.5)
+
+        for i in range(0, step_levels):
+            self.turn(max_power - power_units_per_level * step_levels, ramp_units_per_level)
+            time.sleep(0.5)
+
 
     def turn(self, power, tacho_units, brake=True, timeout=1, emulate=True):
         """Use this to turn a motor. The motor will not stop until it turns the
