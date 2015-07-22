@@ -141,14 +141,14 @@ class MyMotor(MyBaseMotor):
     def _get_new_state(self):
         state = self._get_state()
         if self.sync:
-            state.mode = MODE_MOTOR_ON | MODE_REGULATED
-            state.regulation = REGULATION_MOTOR_SYNC
+            state.mode = motor.MODE_MOTOR_ON | motor.MODE_REGULATED
+            state.regulation = motor.REGULATION_MOTOR_SYNC
             state.turn_ratio = self.turn_ratio
         else:
-            state.mode = MODE_MOTOR_ON | MODE_REGULATED
-            state.regulation = REGULATION_MOTOR_SPEED
-        state.run_state = RUN_STATE_RUNNING
-        state.tacho_limit = LIMIT_RUN_FOREVER
+            state.mode = motor.MODE_MOTOR_ON | motor.MODE_REGULATED
+            state.regulation = motor.REGULATION_MOTOR_SPEED
+        state.run_state = motor.RUN_STATE_RUNNING
+        state.tacho_limit = motor.LIMIT_RUN_FOREVER
         return state
 
     def get_tacho(self):
@@ -165,23 +165,23 @@ class MyMotor(MyBaseMotor):
         state = self._get_new_state()
         state.power = power
         if not regulated:
-            state.mode = MODE_MOTOR_ON
+            state.mode = motor.MODE_MOTOR_ON
         self._set_state(state)
 
     def brake(self):
         """Holds the motor in place"""
         state = self._get_new_state()
         state.power = 0
-        state.mode = MODE_MOTOR_ON | MODE_BRAKE | MODE_REGULATED
+        state.mode = motor.MODE_MOTOR_ON |motor.MODE_BRAKE |motor.MODE_REGULATED
         self._set_state(state)
 
     def idle(self):
         '''Tells the motor to stop whatever it's doing. It also desyncs it'''
         state = self._get_new_state()
         state.power = 0
-        state.mode = MODE_IDLE
-        state.regulation = REGULATION_IDLE
-        state.run_state = RUN_STATE_IDLE
+        state.mode =motor.MODE_IDLE
+        state.regulation = motor.REGULATION_IDLE
+        state.run_state = motor.RUN_STATE_IDLE
         self._set_state(state)
 
     def weak_turn(self, power, tacho_units):
@@ -195,8 +195,8 @@ class MyMotor(MyBaseMotor):
         state = self._get_new_state()
 
         # Update modifiers even if they aren't used, might have been changed
-        state.mode = MODE_MOTOR_ON
-        state.regulation = REGULATION_IDLE
+        state.mode =motor.MODE_MOTOR_ON
+        state.regulation = motor.REGULATION_IDLE
         state.power = power
         state.tacho_limit = tacho_limit
 
