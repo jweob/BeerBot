@@ -2,7 +2,7 @@
 	    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 		<html xmlns="http://www.w3.org/1999/xhtml">
 		<head>
-		<link href="/static/css/style.css" rel="stylesheet">
+		
 		<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
 		</head>
 			<script type="text/javascript">
@@ -130,6 +130,46 @@
 					});
 				});
 
+                function svgify(){
+                /*
+     * Replace all SVG images with inline SVG, needed to make changes to fill etc.
+     */
+    var count = jQuery('img.svg').length;
+
+    jQuery('img.svg').each(function () {
+        var $img = jQuery(this);
+        var imgID = $img.attr('id');
+        var imgClass = $img.attr('class');
+        var imgURL = $img.attr('src');
+
+        jQuery.get(imgURL, function (data) {
+            // Get the SVG tag, ignore the rest
+            var $svg = jQuery(data).find('svg');
+
+            // Add replaced image's ID to the new SVG
+            if (typeof imgID !== 'undefined') {
+                $svg = $svg.attr('id', imgID);
+            }
+            // Add replaced image's classes to the new SVG
+            if (typeof imgClass !== 'undefined') {
+                $svg = $svg.attr('class', imgClass + ' replaced-svg');
+            }
+
+            // Remove any invalid XML tags as per http://validator.w3.org
+            $svg = $svg.removeAttr('xmlns:a');
+
+            // Replace image with new SVG
+            $img.replaceWith($svg);
+
+            if (!--count) {
+                // Initialise display. This has to come here because the svg conversion creates some asynchronous stuffs
+            }
+        
+    
+                   }, 'xml')
+
+    });
+                }
 		</script>
 		<body onload="createImageLayer();">
 
@@ -148,6 +188,7 @@
 			<button id="laseron">Laser on!</button>
 			<button id="laseroff">Laser off!</button>
 			<button id="headlight">Cycle headlights</button>
+            <img src="BeerBot2Opt.svg" class="svg">
 		</body>
 		</html>
 	

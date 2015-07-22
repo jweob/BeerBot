@@ -210,7 +210,7 @@ class MyMotor(MyBaseMotor):
         return direction * (last_tacho.tacho_count - tacho.tacho_count) >= 0
 
 brick = True
-
+# Test commit
 try:
     b = nxt.find_one_brick()
 except:
