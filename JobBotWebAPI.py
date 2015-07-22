@@ -23,11 +23,11 @@ class MyBaseMotor(object):
     def ramped_turn(self, min_power, max_power, tacho_units, ramp_units, step_levels=5):
         ramp_units_per_level = ramp_units / step_levels
         power_units_per_level = (max_power - min_power) / step_levels
-        print 'Min power ' + min_power
-        print 'Max power ' + max_power
-        print 'Power units per level ' + power_units_per_level
+        print 'Min power ' + str(min_power)
+        print 'Max power ' + str(max_power)
+        print 'Power units per level ' + str(power_units_per_level)
         for i in range(0, step_levels):
-            print 'Running at ' + min_power + power_units_per_level * step_levels
+            print 'Ramping up at ' + str(min_power + power_units_per_level * step_levels)
             self.turn(min_power + power_units_per_level * step_levels, ramp_units_per_level, brake=False)
 
 
@@ -36,7 +36,7 @@ class MyBaseMotor(object):
             self.turn(max_power, tacho_units - ramp_units * 2, brake=False)
 
         for i in range(0, step_levels):
-            print max_power - power_units_per_level * step_levels
+            print 'Ramping down at ' + str(max_power - power_units_per_level * step_levels)
             self.turn(max_power - power_units_per_level * step_levels, ramp_units_per_level, brake=False)
 
 
