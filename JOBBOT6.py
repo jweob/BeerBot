@@ -95,7 +95,8 @@ print ("jweob 23/7/2014")
 print (Back.RESET)
 while 1:
 # Get the instruction:
-    Command = input(Fore.WHITE + Style.BRIGHT + "HELLO AVA AND DANIEL\nPRESS W TO GO FORWARD\nPRESS S TO GO BACKWARD\nPRESS A TO TURN LEFT\nPRESS D TO TURN RIGHT\nPRESS R TO CLOSE CLAW\nPRESS F TO OPEN CLAW\n>"  + Fore.RESET + Style.RESET_ALL)
+    Command = input(Fore.WHITE + Style.BRIGHT + "HELLO AVA AND DANIEL\n W TO GO FORWARD\nPRESS S TO GO BACKWARD\nPRESS A TO TURN LEFT\nPRESS D TO TURN RIGHT\nPRESS R TO CLOSE CLAW\nPRESS F TO OPEN CLAW\n>"  + Fore.RESET + Style.RESET_ALL)
+    
     
     if Command == "":
         CommandStart = Command
